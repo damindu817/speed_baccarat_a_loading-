@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xtreme Baccarat Predictor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loader-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+    }
+
+    .loader-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3em;
+      z-index: 2;
+      animation: smoothColorFade 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes smoothColorFade {
+      0%   { color: #FF1744; }    /* Red */
+      100% { color: #2196F3; }    /* Blue */
+    }
+
+    .progress-ring {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .progress-ring circle {
+      fill: none;
+      stroke-width: 6;
+      stroke-linecap: butt;
+    }
+
+    .progress-bg {
+      stroke: #333;
+    }
+
+    .progress-bar {
+      stroke: #2196F3;
+      stroke-dasharray: 439.6;
+      stroke-dashoffset: 439.6;
+      animation: loadRing 4s linear forwards;
+    }
+
+    @keyframes loadRing {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader-container">
+    <svg class="progress-ring" width="150" height="150">
+      <circle class="progress-bg" cx="75" cy="75" r="70"/>
+      <circle class="progress-bar" id="progressBar" cx="75" cy="75" r="70"/>
+    </svg>
+    <div class="loader-icon"><i class="fas fa-clone"></i></div>
+  </div>
+
+  <script>
+    // Redirect after 4s animation ends
+    document.getElementById("progressBar").addEventListener("animationend", function () {
+      window.location.href = "https://damindu817.github.io/xtreme_speed_baccarat_a_predictor_1xbet/";
+    });
+  </script>
+</body>
+</html>
