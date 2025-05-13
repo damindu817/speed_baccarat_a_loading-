@@ -2,7 +2,9 @@
 <html lang="si">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <title>Xtreme Baccarat Predictor</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
@@ -11,10 +13,19 @@
       padding: 0;
       background-color: #000;
       height: 100vh;
+      width: 100vw;
       font-family: 'Segoe UI', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      touch-action: manipulation;
     }
 
     .loader-container {
@@ -79,6 +90,16 @@
   </div>
 
   <script>
+    // Disable pinch zoom and double tap zoom
+    document.addEventListener('gesturestart', function(e) {
+      e.preventDefault();
+    });
+    
+    // Disable text selection
+    document.addEventListener('selectstart', function(e) {
+      e.preventDefault();
+    });
+    
     // Redirect after 4s animation ends
     document.getElementById("progressBar").addEventListener("animationend", function () {
       window.location.href = "https://damindu817.github.io/xtreme_speed_baccarat_a_predictor_1xbet/";
